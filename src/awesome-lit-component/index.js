@@ -8,6 +8,10 @@ export default class AwesomeLitComponent extends PolyLitElement {
         type: String,
         value: 'Init name',
         observer: 'myNameChanged'
+      },
+      greeting: {
+        type: String,
+        value: 'hi'
       }
     };
   }
@@ -23,7 +27,8 @@ export default class AwesomeLitComponent extends PolyLitElement {
 
   render() {
     return html`
-      <div> ${this.myName} </div>
+      <h1>${this.greeting}</h1>
+      <div> ${this.myName}</div>
     `;
   }
 
